@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINK PAPA</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:#f5f5f5;
+            text-align:center;
+            margin:0;
+            padding:0;
+        }
+
+        header{
+            background:#8B5E3C;
+            color:white;
+            padding:20px;
+        }
+
+        .contenedor{
+            padding:30px;
+        }
+
+        .card{
+            background:white;
+            width:300px;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        button{
+            background:green;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>LINK PAPA</h1>
+    <p>Conectando agricultores y compradores</p>
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+        <h2>Papa Amarilla</h2>
+        <p>Precio: S/ 120 por arroba</p>
+
+        <button onclick="comprar()">
+            Comprar
+        </button>
+    </div>
+
+</div>
+
+<script>
+function comprar(){
+    alert("Pedido realizado correctamente");
+}
+</script>
+
+</body>
+</html>
