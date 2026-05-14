@@ -1,77 +1,328 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LINK PAPA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LINK PAPA</title>
 
-    <style>
-        body{
-            font-family: Arial;
-            background:#f5f5f5;
-            text-align:center;
-            margin:0;
-            padding:0;
-        }
+<style>
 
-        header{
-            background:#8B5E3C;
-            color:white;
-            padding:20px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
 
-        .contenedor{
-            padding:30px;
-        }
+body{
+    background:#f5f5f5;
+}
 
-        .card{
-            background:white;
-            width:300px;
-            margin:auto;
-            padding:20px;
-            border-radius:10px;
-            box-shadow:0px 0px 10px gray;
-        }
+header{
+    background:#7b4b2a;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
 
-        button{
-            background:green;
-            color:white;
-            border:none;
-            padding:10px 20px;
-            border-radius:5px;
-            cursor:pointer;
-        }
+header h1{
+    font-size:40px;
+}
 
-        button:hover{
-            background:darkgreen;
-        }
-    </style>
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+nav{
+    background:#5a341d;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+.hero{
+    padding:50px 20px;
+    text-align:center;
+    background:white;
+}
+
+.hero h2{
+    font-size:35px;
+    color:#7b4b2a;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:green;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.titulo{
+    text-align:center;
+    margin-top:40px;
+    color:#7b4b2a;
+}
+
+.contenedor{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    width:300px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+    text-align:center;
+}
+
+.card h3{
+    color:#7b4b2a;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin:10px 0;
+}
+
+button{
+    background:green;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkgreen;
+}
+
+.formulario{
+    background:white;
+    width:90%;
+    max-width:500px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.formulario h2{
+    text-align:center;
+    color:#7b4b2a;
+    margin-bottom:20px;
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:20px;
+    border:1px solid gray;
+    border-radius:5px;
+}
+
+footer{
+    background:#5a341d;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:25px;
+    text-decoration:none;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    .hero h2{
+        font-size:25px;
+    }
+
+    nav a{
+        display:block;
+        margin:10px;
+    }
+
+}
+
+</style>
 </head>
-
 <body>
 
 <header>
     <h1>LINK PAPA</h1>
-    <p>Conectando agricultores y compradores</p>
+    <p>Conectando agricultores y compradores sin intermediarios</p>
 </header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#pedido">Pedidos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero" id="inicio">
+    <h2>Venta directa de papa</h2>
+
+    <p>
+        Plataforma web que ayuda a agricultores a vender su cosecha
+        directamente a compradores mayoristas de manera rápida y segura.
+    </p>
+
+    <a href="#catalogo" class="btn">
+        Ver catálogo
+    </a>
+</section>
+
+<h2 class="titulo" id="catalogo">
+    Catálogo de papas
+</h2>
 
 <div class="contenedor">
 
     <div class="card">
-        <h2>Papa Amarilla</h2>
-        <p>Precio: S/ 120 por arroba</p>
 
-        <button onclick="comprar()">
-            Comprar
-        </button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Potatoes.jpg">
+
+        <div class="card-content">
+            <h3>Papa Amarilla</h3>
+
+            <p>Precio: S/120 por arroba</p>
+
+            <p>Mínimo: 5 arrobas</p>
+
+            <button onclick="comprar()">
+                Comprar
+            </button>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Patatas.jpg">
+
+        <div class="card-content">
+            <h3>Papa Huayro</h3>
+
+            <p>Precio: S/100 por arroba</p>
+
+            <p>Mínimo: 5 arrobas</p>
+
+            <button onclick="comprar()">
+                Comprar
+            </button>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Kartoffel.jpg">
+
+        <div class="card-content">
+            <h3>Papa Blanca</h3>
+
+            <p>Precio: S/90 por arroba</p>
+
+            <p>Mínimo: 5 arrobas</p>
+
+            <button onclick="comprar()">
+                Comprar
+            </button>
+        </div>
+
     </div>
 
 </div>
 
+<div class="formulario" id="pedido">
+
+    <h2>Realizar pedido</h2>
+
+    <input type="text" placeholder="Nombre completo">
+
+    <input type="number" placeholder="Cantidad de arrobas">
+
+    <select>
+        <option>Seleccionar método de pago</option>
+        <option>Yape</option>
+        <option>Plin</option>
+        <option>Transferencia bancaria</option>
+    </select>
+
+    <input type="file">
+
+    <button onclick="pedido()">
+        Confirmar pedido
+    </button>
+
+</div>
+
+<footer id="contacto">
+    <p>LINK PAPA - Concurso Pro Innovate 2026</p>
+    <p>Contacto: 987654321</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/51987654321">
+    💬
+</a>
+
 <script>
+
 function comprar(){
-    alert("Pedido realizado correctamente");
+    alert("Producto agregado correctamente");
 }
+
+function pedido(){
+    alert("Pedido enviado correctamente");
+}
+
 </script>
 
 </body>
