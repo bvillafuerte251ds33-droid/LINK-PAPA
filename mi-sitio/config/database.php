@@ -9,7 +9,7 @@ function conectar_bd(): PDO
     $puerto = $_ENV['DB_PORT'] ?? '5432';
     $base = $_ENV['DB_NAME'] ?? 'sitio_db';
     $usuario = $_ENV['DB_USER'] ?? 'sitio_user';
-    $clave = $_ENV['DB_PASS'] ?? '';
+    $clave = $_ENV['DB_PASS'] ?? '12345678';
 
     $dsn = "pgsql:host=$host;port=$puerto;dbname=$base";
 
